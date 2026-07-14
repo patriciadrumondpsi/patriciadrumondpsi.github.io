@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patrícia Drumond | Psicóloga</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, sans-serif;
-            background: #f8f7f4;
+            background: #e0ebe5;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -19,72 +20,122 @@
             padding: 24px;
         }
         .card {
-            max-width: 420px; width: 100%;
-            background: #fff;
-            border-radius: 24px;
-            padding: 40px 28px 32px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            max-width: 400px; width: 100%;
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 36px 24px 28px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
             text-align: center;
         }
-        .avatar {
-            width: 96px; height: 96px;
+        .photo {
+            width: 120px; height: 120px;
             border-radius: 50%;
-            background: #e8e4de;
-            margin: 0 auto 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: #6b5e50;
+            object-fit: cover;
+            margin: 0 auto 18px;
+            display: block;
+            border: 3px solid #e0ebe5;
         }
-        h1 { font-size: 22px; font-weight: 600; color: #2c2c2c; }
-        .subtitle { font-size: 14px; color: #7a6e5e; margin-top: 2px; }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #987a56;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #7a6e5e;
+            margin-top: 2px;
+            font-weight: 400;
+        }
+        .greeting {
+            font-size: 14px;
+            color: #987a56;
+            font-weight: 600;
+            margin: 14px 0 6px;
+        }
         .bio {
-            font-size: 14px; color: #555; line-height: 1.6;
-            margin: 18px 0 24px; padding: 0 4px;
+            font-size: 13px;
+            color: #555;
+            line-height: 1.7;
+            margin: 0 0 20px;
+            padding: 0 6px;
         }
-        .bio strong { color: #2c2c2c; }
-        .links { display: flex; flex-direction: column; gap: 12px; }
+        .bio strong { color: #3d3d3d; }
+        .divider {
+            height: 1px;
+            background: #e0ebe5;
+            margin: 0 20px 18px;
+        }
+        .instruction {
+            font-size: 11px;
+            color: #987a56;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+        .links { display: flex; flex-direction: column; gap: 10px; }
         .link-btn {
             display: flex; align-items: center; justify-content: center;
-            gap: 10px; padding: 16px 20px; border-radius: 14px;
-            text-decoration: none; font-size: 15px; font-weight: 500;
+            gap: 10px; padding: 14px 20px; border-radius: 14px;
+            text-decoration: none; font-size: 14px; font-weight: 500;
             transition: all 0.2s ease;
         }
-        .link-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        .link-btn.primary { background: #3d5a5c; color: #fff; }
-        .link-btn.primary:hover { background: #334b4d; }
-        .link-btn.secondary { background: #f0edeb; color: #3d3d3d; }
-        .link-btn.secondary:hover { background: #e6e2dd; }
-        .link-btn.outline { background: transparent; color: #3d5a5c; border: 1.5px solid #3d5a5c; }
-        .link-btn.outline:hover { background: #f5f8f7; }
+        .link-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .link-btn.primary { background: #987a56; color: #fff; }
+        .link-btn.primary:hover { background: #876a48; }
+        .link-btn.secondary { background: #f0ebe5; color: #4a3f35; }
+        .link-btn.secondary:hover { background: #e8e0d6; }
+        .link-btn.outline { background: transparent; color: #987a56; border: 1.5px solid #987a56; }
+        .link-btn.outline:hover { background: #f5f0ea; }
         .badge {
-            display: inline-block; background: #e8f0ee; color: #3d5a5c;
-            font-size: 11px; font-weight: 500; padding: 4px 12px;
-            border-radius: 20px; margin-top: 12px;
+            display: inline-block;
+            background: #e0ebe5;
+            color: #5a7a6e;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-top: 16px;
         }
-        .footer { font-size: 12px; color: #aaa; margin-top: 20px; }
-        .footer a { color: #7a6e5e; text-decoration: none; }
+        .footer { font-size: 12px; color: #bbb; margin-top: 16px; }
+        .footer a { color: #987a56; text-decoration: none; }
+        @media (max-width: 480px) {
+            .card { padding: 28px 18px 24px; }
+            h1 { font-size: 22px; }
+            .photo { width: 100px; height: 100px; }
+        }
     </style>
 </head>
 <body>
 <div class="card">
-    <div class="avatar">🧠</div>
+    <img src="3B2A5241.jpg" alt="Patrícia Drumond" class="photo" />
+    
     <h1>Patrícia Drumond</h1>
     <p class="subtitle">Psicóloga (CRP)</p>
+    
+    <p class="greeting">Olá, muito prazer!</p>
+    
     <p class="bio">
-        Psicoterapia para <strong>jovens, adultos e idosos</strong> com
-        <strong>TCC</strong> e terapias contextuais.<br />
-        Pós-graduanda em Neuropsicologia — <strong>USP</strong>
+        A psicoterapia é um cuidado precioso com a saúde mental e um caminho de autoconhecimento libertador. Por meio dessa trajetória realizada com acompanhamento profissional, é possível encontrar um significado à vida e vivê-la de forma plena, de acordo com os seus valores.
     </p>
+    
+    <div class="divider"></div>
+    
+    <p class="instruction">✦ TOQUE NOS ÍCONES ABAIXO ✦</p>
+    
     <div class="links">
-        <a href="https://wa.me/5511992708686" target="_blank" class="link-btn primary">📲 Agende sua consulta</a>
+        <a href="https://wa.me/5511992708686" target="_blank" class="link-btn primary">📲 WhatsApp</a>
         <a href="https://www.instagram.com/patriciadrumondr/" target="_blank" class="link-btn secondary">📸 Instagram</a>
-        <a href="http://www.patriciadrumondpsi.com.br/" target="_blank" class="link-btn secondary">🌐 Site profissional</a>
-        <a href="mailto:patriciadrumondpsi@gmail.com" class="link-btn outline">✉️ Contato por e-mail</a>
+        <a href="http://www.patriciadrumondpsi.com.br/" target="_blank" class="link-btn secondary">🌐 Site</a>
+        <a href="mailto:patriciadrumondpsi@gmail.com" class="link-btn outline">✉️ E-mail</a>
     </div>
+    
     <div class="badge">Atendimento online e presencial</div>
-    <div class="footer"><a href="https://www.instagram.com/patriciadrumondr/">@patriciadrumondr</a></div>
+    
+    <div class="footer">
+        <a href="https://www.instagram.com/patriciadrumondr/">@patriciadrumondr</a>
+    </div>
 </div>
 </body>
 </html>
