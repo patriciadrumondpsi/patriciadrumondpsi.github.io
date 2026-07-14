@@ -1,11 +1,90 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Meu Site</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patrícia Drumond | Psicóloga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #f8f7f4;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .card {
+            max-width: 420px; width: 100%;
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px 28px 32px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .avatar {
+            width: 96px; height: 96px;
+            border-radius: 50%;
+            background: #e8e4de;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: #6b5e50;
+        }
+        h1 { font-size: 22px; font-weight: 600; color: #2c2c2c; }
+        .subtitle { font-size: 14px; color: #7a6e5e; margin-top: 2px; }
+        .bio {
+            font-size: 14px; color: #555; line-height: 1.6;
+            margin: 18px 0 24px; padding: 0 4px;
+        }
+        .bio strong { color: #2c2c2c; }
+        .links { display: flex; flex-direction: column; gap: 12px; }
+        .link-btn {
+            display: flex; align-items: center; justify-content: center;
+            gap: 10px; padding: 16px 20px; border-radius: 14px;
+            text-decoration: none; font-size: 15px; font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .link-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .link-btn.primary { background: #3d5a5c; color: #fff; }
+        .link-btn.primary:hover { background: #334b4d; }
+        .link-btn.secondary { background: #f0edeb; color: #3d3d3d; }
+        .link-btn.secondary:hover { background: #e6e2dd; }
+        .link-btn.outline { background: transparent; color: #3d5a5c; border: 1.5px solid #3d5a5c; }
+        .link-btn.outline:hover { background: #f5f8f7; }
+        .badge {
+            display: inline-block; background: #e8f0ee; color: #3d5a5c;
+            font-size: 11px; font-weight: 500; padding: 4px 12px;
+            border-radius: 20px; margin-top: 12px;
+        }
+        .footer { font-size: 12px; color: #aaa; margin-top: 20px; }
+        .footer a { color: #7a6e5e; text-decoration: none; }
+    </style>
 </head>
 <body>
-    <h1>Olá! Meu site está funcionando!</h1>
+<div class="card">
+    <div class="avatar">🧠</div>
+    <h1>Patrícia Drumond</h1>
+    <p class="subtitle">Psicóloga (CRP)</p>
+    <p class="bio">
+        Psicoterapia para <strong>jovens, adultos e idosos</strong> com
+        <strong>TCC</strong> e terapias contextuais.<br />
+        Pós-graduanda em Neuropsicologia — <strong>USP</strong>
+    </p>
+    <div class="links">
+        <a href="https://wa.me/5511992708686" target="_blank" class="link-btn primary">📲 Agende sua consulta</a>
+        <a href="https://www.instagram.com/patriciadrumondr/" target="_blank" class="link-btn secondary">📸 Instagram</a>
+        <a href="http://www.patriciadrumondpsi.com.br/" target="_blank" class="link-btn secondary">🌐 Site profissional</a>
+        <a href="mailto:patriciadrumondpsi@gmail.com" class="link-btn outline">✉️ Contato por e-mail</a>
+    </div>
+    <div class="badge">Atendimento online e presencial</div>
+    <div class="footer"><a href="https://www.instagram.com/patriciadrumondr/">@patriciadrumondr</a></div>
+</div>
 </body>
 </html>
